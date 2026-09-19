@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>计算机协会新生的个人主页</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+      background: linear-gradient(160deg, #eef4ff 0%, #f7f3ff 100%);
+      color: #2c3345;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 520px;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 40px 36px;
+      box-shadow: 0 16px 40px rgba(80, 100, 160, 0.12);
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: #6b7390;
+      margin-bottom: 24px;
+    }
+
+    p {
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    button {
+      border: none;
+      background: #4c6fff;
+      color: #ffffff;
+      font-size: 16px;
+      padding: 12px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #3b5ce8;
+    }
+
+    #time {
+      margin-top: 16px;
+      min-height: 24px;
+      color: #4c6fff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>计算机协会新生</h1>
+    <p class="subtitle">你好，欢迎来到我的个人主页</p>
+    <p>
+      我是计算机协会的一名新生，刚刚开始学习网页制作。
+      我对编程很感兴趣，希望通过练习做出更多有趣的小网页，
+      并在协会里认识更多志同道合的朋友。
+    </p>
+    <button type="button" onclick="showTime()">点击显示当前时间</button>
+    <div id="time"></div>
+  </main>
+
+  <script>
+    function showTime() {
+      const now = new Date();
+      const text = now.toLocaleString("zh-CN");
+      document.getElementById("time").textContent = "现在时间是：" + text;
+    }
+  </script>
+</body>
+</html>
